@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Audio Zone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Sign Up</button>
+  </div>
+</div>
+
+<!-- PAYWALL -->
+<div id="paywall" class="modal">
+  <div class="modal-content">
+    <h2>🔒 Locked</h2>
+    <p>Үзэхийн тулд 9900₮ төлөх хэрэгтэй</p>
+    <button onclick="fakePay()">Төлөх</button>
+    <button onclick="closePaywall()">Close</button>
+  </div>
+</div>
+    <header>
+        <div class="logo">...</div>
+       <nav class="types">
+    <span data-type="all">Бүгд</span>
+    <span data-type="story">Зохиолууд</span>
+    <span data-type="mba">МБАЯ</span>
+</nav>
+        <div class="search-profile">
+            <div class="search-container11">
+                <input type="text" placeholder="Search stories" class="search-input112">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="profile.container">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.5X5YCMnONnnBftR_180S0gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="profile-circle" alt="profile"> 
+            <div onclick="togglemenu" alt="profile">   
+            <div id="pandak" class="verygay">
+                <a href="#profile">My Profile
+                <a href="#settings">Settings
+                <a href="#logout">Logout
+                    
+                </a>
+            </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <h3>Saudio</h3>
+
+    <div class="container">
+        <a href="https://www.youtube.com/watch?v=p5QWVUYJclE" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/p5QWVUYJclE/hqdefault.jpg" alt="thumb">
+            <p class="title">Хээрийн юм</p>
+        <a href="https://www.youtube.com/watch?v=ppVoGh_vaG8" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/ppVoGh_vaG8/hqdefault.jpg" alt="thumb">
+            <p class="title">Хүний ганц охин</p>
+        <a href="https://youtu.be/spdqMBgL7x4?si=s085NtxqnNB3kNJR" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/spdqMBgL7x4/hqdefault.jpg" alt="thumb">
+            <p class="title">Хөлдүүс</p>
+        <a href="https://www.youtube.com/watch?v=2_lxaDTkQDk" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/2_lxaDTkQDk/hqdefault.jpg" alt="thumb">
+            <p class="title">Эргээд ир</p>
+        <a href="https://youtu.be/I9DRvkc69kc?si=60d_WlZ-fQoxznCZ" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/I9DRvkc69kc/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGFwgXChcMA8=&rs=AOn4CLAuNX8kCrniBWeK9twVQwHRACC-zg" alt="thumb">
+            <p class="title">Сүнстэй байшин</p>
+        <a href="https://youtu.be/cVwM98C_Q8k?si=4gXg8IHyJbdS28nJ" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/cVwM98C_Q8k/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGHIgZigfMA8=&rs=AOn4CLB57JKF9tlWf_GxkcnapjLqUEQ-vw" alt="thumb">
+            <p class="title">Хоолой</p>
+        <a href="https://youtu.be/TUXiJVqgAF4?si=aonAvdGmR_9fWu_W" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/TUXiJVqgAF4/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGBkgEyh_MA8=&rs=AOn4CLA47us6_W_eVniP21LYKTt0kyTNXQ" alt="thumb">
+            <p class="title">Сахилга зөрчигч</p>
+        <a href="https://youtu.be/hsO2lhruROc?si=ziDhTPLOHrdjYRfD" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/hsO2lhruROc/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGFcgVihlMA8=&rs=AOn4CLCLJdmz7sXpKtSnCfHkrNPnrLSN9A" alt="thumb">
+            <p class="title">Хэен Хуар</p>
+        <a href="https://youtu.be/NyDEgQymTgQ?si=6sQx97oHw1A_ub-s" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/NyDEgQymTgQ/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGA8gZShlMA8=&rs=AOn4CLBAoAAGK-khOaXqJkZq0G6W1gfddQ" alt="thumb">
+            <p class="title">Эмгэн</p>
+        <a href="https://youtu.be/CWUD3IIN6Kk?si=H0WJBZwcsQgiM2h9" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/9dM4Aw6DFrI/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLABQ6OOP43e06e3un2KZM49C-x-Qg" alt="thumb">
+            <p class="title">Мах уу? Шөл үү?</p>
+        <a href="https://youtu.be/0cp80mNSVOE?si=YAGynby_jXF9RJsj" class="story-card" data-type="story">
+            <img src="https://i.ytimg.com/vi/0cp80mNSVOE/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGF4gXiheMA8=&rs=AOn4CLDzKyC2KQc5CN-viImC3JXm0lrD3w" alt="thumb">
+            <p class="title">Яс</p>
+         <a href="https://youtu.be/4hrSCssE8IY?si=T9uPASPJUPvP7J0O" class="story-card" data-type="mba">
+            <img src="https://i.ytimg.com/an_webp/4hrSCssE8IY/mqdefault_6s.webp?du=3000&sqp=CK6P6s0G&rs=AOn4CLAKYyIOlkkrLH-thDkMJv98btWOwQ" alt="thumb">
+            <p class="title">Монголд болсон аймшигт явдлууд 120-...</p>
+         <a href="https://youtu.be/D_1YdabUmSE?si=-_uesS4B-z8y4R_J" class="story-card" data-type="mba">
+            <img src="https://i.ytimg.com/vi/D_1YdabUmSE/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHUBoAC4AOKAgwIABABGFkgWShZMA8=&rs=AOn4CLAkKMoRvcZqjXj1o7r7pGcqOv-iCg" alt="thumb">
+            <p class="title">Монголд болсон аймшигт явдлууд 1-15</p>
+         <a href="https://youtu.be/WbmbOHdNU6Q?si=ICD9fcIA2CebYFgX" class="story-card" data-type="mba">
+            <img src="https://i.ytimg.com/vi/WbmbOHdNU6Q/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHUBoAC4AOKAgwIABABGEsgVihlMA8=&rs=AOn4CLDURjISxA2nmtowED6rsl6X8xCvJQ" alt="thumb">
+            <p class="title">Монголд болсон аймшигт явдлууд 76-87</p>
+         <a href="https://youtu.be/HrBLf1bh5gk?si=fyMrseO9Q9742xNN" class="story-card" data-type="mba">
+            <img src="https://i.ytimg.com/vi/HrBLf1bh5gk/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHUBoAC4AOKAgwIABABGGUgZShWMA8=&rs=AOn4CLAhsBcPhBlUp7u30y6BfrusgIgWdQ" alt="thumb">
+            <p class="title">Монголд болсон аймшигт явдлууд 61-75</p>
+         <a href="https://youtu.be/cEQiao5yZoM?si=q-EvxvBzqLbu5xAw" class="story-card" data-type="mba">
+            <img src="https://i.ytimg.com/vi/cEQiao5yZoM/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHUBoAC4AOKAgwIABABGH8gPig7MA8=&rs=AOn4CLCxSsGx-_9YndbR2h3rWI0Bq2A0KQ" alt="thumb">
+            <p class="title">Монголд болсон аймшигт явдлууд 46-60</p>
+         <a href="https://youtu.be/a3RLBdJL6QE?si=sOrdE-G3QfOfcEfG" class="story-card" data-type="mba">
+            <img src="https://i.ytimg.com/vi/a3RLBdJL6QE/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHUBoAC4AOKAgwIABABGDggSShyMA8=&rs=AOn4CLBacSe-vK1EW3MkYjIfF6SFETPr9w" alt="thumb">
+            <p class="title">Монголд болсон аймшигт явдлууд 31-45</p>
+         <a href="https://youtu.be/lDI6TaXdlkQ?si=NNuL5jw2WDueWpeX" class="story-card" data-type="mba">
+            <img src="https://i.ytimg.com/vi/lDI6TaXdlkQ/hqdefault.jpg?sqp=-oaymwFBCPYBEIoBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHUBoAC4AOKAgwIABABGHIgVigxMA8=&rs=AOn4CLCyxZNnF3farw8PcTH5YsFiu8iqfQ" alt="thumb">
+            <p class="title">Монголд болсон аймшигт явдлууд 15-30</p>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
